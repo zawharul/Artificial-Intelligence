@@ -1,0 +1,16 @@
+final(s3).
+tran(s1,a,s1).
+tran(s1,a,s2).
+tran(s1,b,s1).
+tran(s2,b,s3).
+tran(s3,b,s4).
+silent(s2,s4).
+silent(s3,s1).
+accepts(S,[]):-
+final(S).
+accepts(S,[H|T]):-
+ tran(S,H,S1),
+ accepts(S1,T).
+accepts(S,String):-
+ silent(S,S1),
+ accepts(S1,String).

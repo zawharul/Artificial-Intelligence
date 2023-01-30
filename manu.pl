@@ -1,0 +1,36 @@
+start:- nl,
+write('**MENU**'),nl,
+write('1. Personal Info'),nl,
+write('2. Family Info'),nl,
+write('3. Academic Info'),nl,
+write('0. Exit'),nl,nl,
+write('Choice = ? '),read(X),
+( X = 1,
+write('Personal Info:'),nl,
+write('Name: '),read(Name),
+write('Mobile: '),read(Mob),
+write('Name: '),write(Name),nl,
+write('Mobile: '),write(Mob),nl,
+
+start;
+
+X = 2,
+write('Family Info:'),nl,
+write('Father name: '),read(Fnam),
+write('Mother name: '),read(Mnam),
+write('Home Address: '),read(Home),
+write('Father name: '),write(Fnam),nl,
+write('Mother name: '),write(Mnam),nl,
+write('Home Address: '),write(Home),nl,
+start;
+X = 3,
+write('Academic Info:'),nl,
+write('Dept.: '),read(Dept),
+write('Roll No.: '),read(Roll),
+write('CGPA: '),read(Cgpa),
+write('Dept.: '),write(Dept),nl,
+write('Roll No.: '),write(Roll),nl,
+write('CGPA: '),write(Cgpa),nl,
+start;
+X = 0,
+write('Thanks')).
